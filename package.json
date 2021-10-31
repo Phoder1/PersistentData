@@ -1,0 +1,18 @@
+{
+	"name": "com.alontalmi.odincustomattributes",
+	"version": "1.0.0",
+	"displayName": "Odin Custom Attributes",
+	"description": "Simple yet powerful custom attributes collection made for personal use using Odin Inspector.",
+	"unity": "2020.3",
+	"keywords": [
+		"attributes",
+		"editor",
+		"ease of use",
+		"tool"
+	],
+	"author": {
+		"name": "Alon Talmi",
+		"email": "alontalmi@protonmail.com",
+		"url": "https://github.com/Phoder1"
+	}
+}
