@@ -1,14 +1,10 @@
 {
 	"name": "com.alontalmi.odincustomattributes",
-	"version": "1.0.0",
-	"displayName": "Odin Custom Attributes",
-	"description": "Simple yet powerful custom attributes collection made for personal use using Odin Inspector.",
+	"version": "1.0.1",
+	"displayName": "Persistent data",
+	"description": "Simple persistent data manager to move data between scenes or seperate elements.",
 	"unity": "2020.3",
 	"keywords": [
-		"attributes",
-		"editor",
-		"ease of use",
-		"tool"
 	],
 	"author": {
 		"name": "Alon Talmi",
