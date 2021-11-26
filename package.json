@@ -1,14 +1,14 @@
 {
-	"name": "com.alontalmi.persistentdata",
-	"version": "1.0.4",
-	"displayName": "Persistent data",
-	"description": "Simple persistent data manager to move data between scenes or seperate elements.",
-	"unity": "2020.3",
-	"keywords": [
-	],
-	"author": {
-		"name": "Alon Talmi",
-		"email": "alontalmi@protonmail.com",
-		"url": "https://github.com/Phoder1"
-	}
+  "name": "com.alontalmi.persistentdata",
+  "version": "1.0.5",
+  "displayName": "Persistent data",
+  "description": "Simple persistent data manager to move data between scenes or seperate elements.",
+  "unity": "2020.3",
+  "keywords": [],
+  "author": {
+    "name": "Alon Talmi",
+    "email": "alontalmi@protonmail.com",
+    "url": "https://github.com/Phoder1"
+  },
+  "type": "tool"
 }
