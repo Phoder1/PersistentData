@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
@@ -25,13 +24,11 @@ namespace Phoder1.PersistentData
         {
             OnValueChangedUnsubscribe(ValueChanged);
         }
-        [ShowInInspector, HideInEditorMode]
         public T Value
         {
             get => GetValue();
             set => SetValue(value);
         }
-        [ShowInInspector, HideInEditorMode]
         public bool Persistent
         {
             get => GetPersistent();

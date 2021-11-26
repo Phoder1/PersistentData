@@ -1,6 +1,6 @@
 {
-    "name": "alontalmi.odincustomattributes.Runtime",
-    "rootNamespace": "CustomAttributes",
+    "name": "Phoder1.PersistentData",
+    "rootNamespace": "Phoder1.PersistentData",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
