@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Phoder1.PersistentData
 {
-    public class PersistentFloat : MonoBehaviour
-    {
-
-    }
+    [DefaultExecutionOrder(-999)]
+    [AddComponentMenu("Phoder1/Persistent Data/Float data")]
+    public class PersistentFloat : BaseKeySOData<float> { }
 }

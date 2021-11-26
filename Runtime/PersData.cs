@@ -121,7 +121,7 @@ namespace Phoder1.PersistentData
             if (TryGetData(key, out var data))
                 data.OnValueChanged -= action;
         }
-         
+
         public static void ClearNonePersistentData()
         {
             if (_dataDict == null || _dataDict.Count == 0)
@@ -206,7 +206,7 @@ namespace Phoder1.PersistentData
                 get => _value;
                 set
                 {
-                    if (_value.Equals(value))
+                    if (Equal(_value, value))
                         return;
 
                     OnValueChanged?.Invoke(_value, value);
@@ -214,7 +214,7 @@ namespace Phoder1.PersistentData
                     _value = value;
                 }
             }
-
+            private bool Equal(T a, T b) => (a == null && b == null) || (a != null && a.Equals(b));
             /// <summary>
             /// OnValueChange(PreviousValue, NewValue)
             /// </summary>

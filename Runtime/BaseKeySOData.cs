@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Phoder1.PersistentData
 {
+    [DefaultExecutionOrder(-999)]
     public abstract class BaseKeySOData<T> : BasePersistentData<T>
     {
         [SerializeField]
