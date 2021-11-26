@@ -7,14 +7,29 @@ namespace Phoder1.PersistentData
     public abstract class BasePersistentData<T> : MonoBehaviour
     {
         [SerializeField]
+        private bool _defaultPersistent;
+
+        [SerializeField]
         private UnityEvent<T> OnValueChanged;
         protected abstract IDataKey Key { get; }
+        protected virtual T DefaultValue => default;
+
+        private void Awake()
+        {
+            Init();
+        }
+
+        private void Init()
+        {
+            if (!TryGetValue(out var val))
+                SetValue(DefaultValue, _defaultPersistent);
+        }
 
         private void OnEnable()
         {
             OnValueChangedSubscribe(ValueChanged);
 #if UNITY_EDITOR
-            if (Key.TryGetValue<T>(out var _val))
+            if (TryGetValue(out var _val))
                 Debug.Log($"Value exists, Value = {_val}");
             else
                 Debug.Log($"Value doesn't exists! Value defaulted to {_val}");
@@ -26,12 +41,26 @@ namespace Phoder1.PersistentData
         }
         public T Value
         {
-            get => GetValue();
-            set => SetValue(value);
+            get
+            {
+                if(TryGetValue(out T val))
+                    return val;
+
+                Init();
+                return DefaultValue;
+            }
+            set => SetValue(value, Persistent);
         }
         public bool Persistent
         {
-            get => GetPersistent();
+            get
+            {
+                if(TryGetPersistent(out bool persistent))
+                    return persistent;
+
+                Init();
+                return _defaultPersistent;
+            }
             set => SetPersistent(value);
         }
         #region IDataKey extensions
